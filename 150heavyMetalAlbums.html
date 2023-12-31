@@ -3,27 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic List without Repeated Items</title>
+    <title>Dynamic List with Spotify Album Search</title>
     <style>
         /* Optional style for better presentation */
         ul {
             list-style-type: none;
             padding: 0;
         }
+
+        #searchResults img {
+            cursor: pointer;
+            margin: 5px;
+            max-width: 100px; /* Limit the maximum width of the images */
+        }
     </style>
 </head>
 <body>
 
-    <h2>Dynamic List without Repeated Items</h2>
+    <h2>Dynamic List with Spotify Album Search</h2>
+
+    <div>
+        <label for="artistSearch">Search for an artist:</label>
+        <input type="text" id="artistSearch" placeholder="Enter an artist name">
+        <button onclick="searchArtist()">Search Artist</button>
+    </div>
+
+    <div id="searchResults">
+        <!-- Artist's albums and album covers will be displayed here -->
+    </div>
 
     <ul id="list">
         <!-- List items will be added here dynamically -->
     </ul>
 
-    <input type="text" id="newItem" placeholder="Enter a new item">
-    <button onclick="addItem()">Add Item</button>
-
-
-
+    <script src="script.js"></script>
 </body>
 </html>
